@@ -1,0 +1,28 @@
+rules:
+  - id: com.example.github
+    pattern: Github
+    message: |
+      GitHub is GitHub, not Github
+
+      You may be misspelling the name of the service!
+    justification:
+      - When you mean a service different from GitHub
+      - When GitHub is renamed
+    glob:
+      - "**/*.js"
+    pass:
+      - <a>Signup via GitHub</a>
+    fail:
+      - <a>Signup via Github</a>
+  - id: com.example.github.test
+    pattern: Github
+    message: |
+      GitHub is GitHub, not Github
+
+      You may be misspelling the name of the service!
+    glob:
+      - "**/*.js"
+    pass:
+      - <a>Signup via GitHub</a>
+    fail:
+      - <a>Signup via Github</a>
